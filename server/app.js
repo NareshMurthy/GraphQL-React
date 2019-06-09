@@ -12,7 +12,7 @@ mongoose.connect(
 );
 
 mongoose.connection.once("open", () => {
-  console.log("connection has been made");
+  console.log("Connected to Mongo DB");
 });
 
 app.use(
@@ -23,6 +23,6 @@ app.use(
   })
 );
 
-app.listen(4000, () => {
-  console.log("listening in port 4000...");
+app.listen(process.env.PORT || 4000, () => {
+  console.log("Express server Up and Running");
 });
