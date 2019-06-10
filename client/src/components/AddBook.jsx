@@ -6,12 +6,27 @@ import {
   addBookMutation,
   getBooksQuery
 } from "../queries/queries";
+
 class AddBook extends Component {
   state = {
     name: "",
     genre: "",
     authorid: ""
   };
+
+  enableButton() {
+    const { name, genre, authorid } = this.state;
+    if (name === "" || genre === "" || authorid === "") {
+      return (
+        <button disabled="disabled" className="btn btn-dark disabled">
+          + Add Book
+        </button>
+      );
+    } else {
+      return <button className="btn btn-dark">+ Add Book</button>;
+    }
+  }
+
   displayAuthors = () => {
     var data = this.props.getAuthorsQuery;
     if (data.loading) {
@@ -48,9 +63,7 @@ class AddBook extends Component {
           id="add-book"
           style={{ width: "21rem" }}
         >
-          <div className="card-header">
-            <button className="btn btn-dark">+ Add Book</button>
-          </div>
+          <div className="card-header">{this.enableButton()}</div>
           <div className="card-body">
             <div className="field form-group">
               <label htmlFor="bookName">Book name:</label>

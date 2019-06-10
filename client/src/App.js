@@ -10,6 +10,7 @@ import AddBook from "./components/AddBook";
 
 const client = new ApolloClient({
   uri: "https://naresh-library-app.herokuapp.com/graphql"
+  // uri: "http://localhost:4000/graphql"
 });
 
 function App() {
@@ -18,7 +19,6 @@ function App() {
       <div className="main">
         <h1>My Reading List</h1>
         <BookList />
-
         <AddBook />
       </div>
     </ApolloProvider>
