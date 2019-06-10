@@ -9,7 +9,7 @@ import { ApolloProvider } from "react-apollo";
 import AddBook from "./components/AddBook";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql"
+  uri: "https://naresh-library-app.herokuapp.com/graphql"
 });
 
 function App() {
