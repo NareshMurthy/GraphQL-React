@@ -1,5 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-My Library app built with the MERN stack along with GraphQL, BootStrap and Apollo Boost.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br>
+My Library app is built with the MERN stack along with GraphQL, BootStrap and Apollo Boost.
 
 ## Quick Start
 
@@ -17,5 +17,7 @@ You will also see any lint errors in the console.
 
 ## Deployment
 
-There is a Heroku post build script so that you do not have to compile your React frontend manually, it is done on the server. Simply push to Heroku and it will build and load the client index.html page
-https://naresh-library-app.herokuapp.com/
+Deployed on Heroku<br>
+Demo: https://naresh-library-app.herokuapp.com/<br>
+Usage: 1)Enter the book details which you want to add to the library and click on Add Book.<br>
+2)Click on an individual book to display more details on it.
